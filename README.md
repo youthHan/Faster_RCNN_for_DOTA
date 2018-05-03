@@ -1,7 +1,7 @@
 ## Disclaimer
 This is the official repo of paper [_DOTA: A Large-scale Dataset for Object Detection in Aerial Images_](https://arxiv.org/abs/1711.10398). This repo contains code for training Faster R-CNN on oriented bounding boxes and horizontal bounding boxes as reported in our paper.
 
-This code is mostly modified by [Zhen Zhu](https://github.com/jessemelpolio) and [Jian Ding]().
+This code is mostly modified by [Zhen Zhu](https://github.com/jessemelpolio) and [Jian Ding](https://github.com/dingjiansw101).
 
 If you use these code in your project, please contain this repo in your paper or license. Please also cite our paper:
 
@@ -9,21 +9,21 @@ DOTA: A Large-scale Dataset for Object Detection in Aerial Images
 Gui-Song Xia\*, Xiang Bai\*, Jian Ding, Zhen Zhu, Serge Belongie, Jiebo Luo, Mihai Datcu, Marcello Pelillo, Liangpei Zhang  
 In CVPR 2018. (* equal contributions)
 
-The code is build on a fork of [Deformble Convolutional Networks](https://github.com/msracver/Deformable-ConvNets).
+The code is built upon a fork of [Deformble Convolutional Networks](https://github.com/msracver/Deformable-ConvNets).
 We use the Faster-RCNN part of it and make some modifications based on Faster-RCNN to regress a quadrangle. More details can be seen in our [paper](https://arxiv.org/abs/1711.10398).
 
 ## Requirements: Software
 
 1. MXNet from [the offical repository](https://github.com/dmlc/mxnet). We tested our code on [MXNet@(commit 62ecb60)](https://github.com/dmlc/mxnet/tree/62ecb60). Due to the rapid development of MXNet, it is recommended to checkout this version if you encounter any issues. 
 
-2. Python 2.7. We recommend using Anaconda2
+2. Python 2.7. We recommend using Anaconda2 to manage the environments and packages.
 
-3. Python packages might missing: cython, opencv-python >= 3.2.0, easydict. If `pip` is set up on your system, those packages should be able to be fetched and installed by running
-	```
-	pip install Cython
-	pip install opencv-python==3.2.0.6
-	pip install easydict==1.6
-	```
+3. Some python packages: cython, opencv-python >= 3.2.0, easydict. If `pip` is set up on your system, those packages should be able to be fetched and installed by running:
+```
+pip install Cython
+pip install opencv-python==3.2.0.6
+pip install easydict==1.6
+```
 4. For Windows users, Visual Studio 2015 is needed to compile cython module.
 
 
@@ -43,7 +43,7 @@ git clone https://github.com/jessemelpolio/Faster_RCNN_for_DOTA.git
 
 We provide trained convnet models, including Faster R-CNN models trained on DOTA.
 
-1. To use the demo with our pre-trained faster-rcnn models for DOTA, please download manually from [OneDrive](https://drive.google.com/open?id=1b6P-UMaBBpMPlcgvc38dMToPAa_Gyu6F), or [BaiduYun](https://pan.baidu.com/s/1YuB5ib7O-Ori1ZpiGf8Egw) and put it under the following folder.
+1. To use the demo with our pre-trained faster-rcnn models for DOTA, please download manually from [Google Drive](https://drive.google.com/open?id=1b6P-UMaBBpMPlcgvc38dMToPAa_Gyu6F), or [BaiduYun](https://pan.baidu.com/s/1YuB5ib7O-Ori1ZpiGf8Egw) and put it under the following folder.
 
 	Make sure it look like this:
 	```
@@ -66,7 +66,7 @@ We provide trained convnet models, including Faster R-CNN models trained on DOTA
 The test.txt and train.txt are name of the subimages(without suffix) for train and test respectively.
 
 
-2. Please download ImageNet-pretrained ResNet-v1-101 model manually from [OneDrive](https://1drv.ms/u/s!Am-5JzdW2XHzhqMEtxf1Ciym8uZ8sg), and put it under folder `./model`. Make sure it look like this:
+2. Please download ImageNet-pretrained ResNet-v1-101 model manually from [OneDrive](https://1drv.ms/u/s!Am-5JzdW2XHzhqMEtxf1Ciym8uZ8sg), or [BaiduYun](https://pan.baidu.com/s/1YuB5ib7O-Ori1ZpiGf8Egw#list/path=%2F), or [Google drive](https://drive.google.com/open?id=1b6P-UMaBBpMPlcgvc38dMToPAa_Gyu6F), and put it under folder `./model`. Make sure it look like this:
 	```
 	./model/pretrained_model/resnet_v1_101-0000.params
 	```
